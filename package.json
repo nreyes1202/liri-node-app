@@ -1,0 +1,32 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "liri app",
+  "main": "keys.js",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "moment": "^2.24.0",
+    "node-spotify-api": "^1.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nreyes1202/liri-node-app.git"
+  },
+  "keywords": [
+    "liri",
+    "spotify",
+    "movies",
+    "bands"
+  ],
+  "author": "Nilsen Reyes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nreyes1202/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/nreyes1202/liri-node-app#readme"
+}
