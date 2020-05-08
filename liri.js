@@ -17,10 +17,7 @@ console.log(command)
 var query = process.argv.slice(3).join(" ");
 console.log(query);
 
-// Use Axios to get back results from bands in town (Concert-This)
-
-// if/else
-
+// Use Axios to get back results from bands in town (Concert-This).
 if (command == "concert-this") {
 
     var queryURL = "https://rest.bandsintown.com/artists/" + query + "/events?app_id=codingbootcamp";
@@ -32,7 +29,9 @@ if (command == "concert-this") {
             console.log("City: " + bandResponse.data[0].venue.city);
             console.log(moment(bandResponse.data[0].datetime).format("MM/DD/YYYY"));
         });
-} else if (command == "spotify-this-song") { 
+
+// Using Spotify API to search for songs. If the song isn't provided, the default song will be "The Sign."
+} else if (command == "spotify-this-song") {
     query = query || "The Sign by Ace of Base";
     spotify.search({ type: 'track', query: query }, function (err, data) {
         if (err) {
@@ -40,6 +39,8 @@ if (command == "concert-this") {
         }
         console.log(data.tracks.items);
     });
+
+// Using OMDB API to search for movies. If no movie is provided, the default movie will be "Mr. Nobody."
 } else if (command == "movie-this") {
     query = query || "Mr. Nobody";
 
@@ -51,6 +52,16 @@ if (command == "concert-this") {
             console.log(movieResponse.data);
             // console.log("City: " + bandResponse.data[0].venue.city);
             // console.log(moment(bandResponse.data[0].datetime).format("MM/DD/YYYY"));
+
+
+            // * Title of the movie.
+            // * Year the movie came out.
+            // * IMDB Rating of the movie.
+            // * Rotten Tomatoes Rating of the movie.
+            // * Country where the movie was produced.
+            // * Language of the movie.
+            // * Plot of the movie.
+            // * Actors in the movie.
         });
 
 
